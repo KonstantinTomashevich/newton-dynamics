@@ -172,7 +172,18 @@ else()
 
 	endif(MSVC)
 
-	target_include_directories(${projectName} PUBLIC .)
+	target_include_directories(${projectName} PUBLIC
+			dTinyxml
+			dCore
+			dNewton
+			dCollision
+			dNewton/dJoints
+			dNewton/dModels
+			dNewton/dIkSolver
+			dNewton/dParticles
+			dNewton/dModels/dVehicle
+			dNewton/dModels/dCharacter)
+
 	if (NEWTON_BUILD_PROFILER)
 		target_link_libraries (${projectName} dProfiler)
 	endif()
