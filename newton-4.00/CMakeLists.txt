@@ -34,7 +34,7 @@ project(NewtonSDK)
 include(CheckTypeSize)
 CHECK_TYPE_SIZE("void*" PTR_SIZE BUILTIN_TYPES_ONLY)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Don't use e.g. GNU extension (like -std=gnu++11) for portability
 set(CMAKE_CXX_EXTENSIONS OFF)

@@ -119,13 +119,13 @@ class ndFunction<Type>
 	}
 
 	template<typename... Args> typename
-	std::result_of<Type(Args...)>::type operator()(Args... args)
+	std::invoke_result<Type, Args...>::type operator()(Args... args)
 	{
 		m_object.operator()(args...);
 	}
 
 	template<typename... Args> typename
-	std::result_of<const Type(Args...)>::type operator()(Args... args) const
+	std::invoke_result<const Type, Args...>::type operator()(Args... args) const
 	{
 		m_object.operator()(args...);
 	}
